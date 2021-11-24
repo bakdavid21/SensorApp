@@ -5,11 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:background="#34A49D"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="0 °C"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,29 +23,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.206" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="316dp"
-        android:layout_marginEnd="159dp"
-        android:text="Show temperature"
-        android:onClick="buttonHandler"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="155dp"
-        android:layout_height="168dp"
+        android:layout_width="224dp"
+        android:layout_height="293dp"
         android:layout_marginStart="128dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="356dp"
         android:layout_marginEnd="128dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_6c4f70ec5931e2342e703e8a3f0a253" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
