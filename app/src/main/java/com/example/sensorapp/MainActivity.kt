@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         textView = findViewById(R.id.textView)
+
+        sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+        sensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
+
+        temperatureHandler = TemperatureEventHandler(textView)
+
+        sensorManager.registerListener(temperatureHandler, sensor, SensorManager.SENSOR_DELAY_NORMAL)
     }
 
     fun buttonHandler(view: View){
